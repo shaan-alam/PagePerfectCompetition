@@ -1,0 +1,65 @@
+.help__wrapper {
+  height: 100vh;
+  width: 100%;
+
+  h1 {
+    text-align: center;
+    font-family: $montserrat;
+  }
+
+  // An individual help block
+  .help__block {
+    margin: 4rem 0;
+    display: flex;
+    justify-content: space-between;
+
+    // Initial setting for left and right Container
+    &LeftContainer,
+    &RightContainer {
+      flex: 1;
+      display: flex;
+      align-items: center;
+
+      h1 {
+        font-family: $montserrat;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        line-height: 1.6;
+        color: $gray-color;
+        font-family: $montserrat;
+      }
+
+      img {
+        width: 70%;
+      }
+    }
+
+    // Left containers should have text left aligned
+    &LeftContainer.text {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      // text-align: left;
+    }
+
+    // Right containers should have text right aligned
+    &RightContainer.text {
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-start;
+      text-align: right;
+    }
+
+    // Aligning images container
+    &LeftContainer {
+      justify-content: flex-start;
+    }
+
+    &RightContainer {
+      justify-content: flex-end;
+    }
+  }
+}

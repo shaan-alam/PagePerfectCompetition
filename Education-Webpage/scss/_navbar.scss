@@ -1,0 +1,21 @@
+nav {
+  padding: 1.8rem;
+  width: 100%;
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+
+    li a {
+      text-decoration: none;
+      color: $gray-color;
+      transition: all 0.4s;
+      font-family: $montserrat;
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+}

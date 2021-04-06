@@ -1,0 +1,29 @@
+.primary__btn {
+  padding: 1rem 1.5rem;
+  background: $primary-color;
+  font-family: $montserrat;
+  color: #fff;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 30px lighten($primary-color, 20%);
+  cursor: pointer;
+  transition: all 0.4s;
+  border: none;
+
+  &:hover {
+    box-shadow: 0 4px 30px $primary-color;
+  }
+}
+
+.secondary__btn {
+  padding: 1rem 1.5rem;
+  background: transparent;
+  font-family: $montserrat;
+  color: lighten($gray-color, 50%);
+  border: 1px solid lighten($gray-color, 50%);
+  border-radius: 2rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.4s;
+}
