@@ -220,7 +220,7 @@ nav ul li a:hover {
 }
 
 .help__wrapper {
-  height: 100vh;
+  height: auto;
   width: 100%;
 }
 
@@ -277,5 +277,67 @@ nav ul li a:hover {
 
 .help__wrapper .help__blockRightContainer {
   justify-content: flex-end;
+}
+
+.contact__wrapper {
+  height: 100vh;
+  width: 100%;
+  background: url("../images/contact-bg.jpg") no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.contact__wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+.contact__wrapper .container {
+  height: 100%;
+  position: inherit;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.contact__wrapper .container h1 {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.contact__wrapper .container form {
+  height: 100%;
+}
+
+.contact__wrapper .container form .form__field {
+  margin: 1.3rem 0;
+}
+
+.contact__wrapper .container form .form__field input,
+.contact__wrapper .container form .form__field textarea {
+  width: 100%;
+  padding: 1.3rem 1rem;
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  outline: none;
+  color: #fff;
+  backdrop-filter: blur(10px);
+}
+
+.contact__wrapper .container form button {
+  width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */
