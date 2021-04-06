@@ -1,0 +1,372 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Raleway:wght@200;300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: #ffa7d8;
+  color: #fff;
+}
+
+main {
+  min-height: 100vh;
+  background: #fafafa;
+  display: flex;
+  justify-content: space-between;
+}
+
+.glass {
+  border-radius: 1rem;
+  flex: 1;
+  background: #fff;
+  min-height: 80vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100vh;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  display: flex;
+  padding-top: 4rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.4s;
+}
+
+@media screen and (max-width: 980px) {
+  .glass {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .glass {
+    left: -100%;
+  }
+  .glass.visible {
+    left: 0%;
+  }
+}
+
+.glass .content {
+  position: inherit;
+  z-index: 20;
+}
+
+.glass .content .close {
+  font-size: 2rem;
+  color: #333;
+  text-decoration: none;
+  display: none;
+  margin: 1rem 0 2rem 0;
+}
+
+@media screen and (max-width: 980px) {
+  .glass .content .close {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .glass {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: -100%;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .glass.visible {
+    left: 0%;
+  }
+}
+
+.glass::after {
+  content: "";
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to right bottom,
+    rgba(162, 223, 255, 0.8),
+    rgba(223, 183, 255, 0.6)
+  );
+  backdrop-filter: blur(1rem);
+}
+
+.ham-menu {
+  display: none;
+}
+
+@media screen and (max-width: 980px) {
+  .ham-menu {
+    display: block;
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    color: #333;
+    font-size: 1rem;
+  }
+}
+
+.dashboard {
+  flex: 3;
+}
+
+.circle1,
+.circle2 {
+  background: #fff;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 14, 147, 0.9),
+    rgba(27, 144, 211, 0.5)
+  );
+  height: 20rem;
+  width: 20rem;
+  border-radius: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.circle1 {
+  top: -20%;
+  left: -20%;
+}
+
+.circle2 {
+  opacity: 0.6;
+  bottom: 15%;
+  left: 10%;
+  height: 10rem;
+  width: 10rem;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0rem 3rem 3rem 0;
+}
+
+@media screen and (max-width: 980px) {
+  .dashboard {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.new__released h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: right;
+}
+
+.new__released h3 {
+  margin: 2rem 0;
+  text-align: right;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 500px) {
+  .new__released h3 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .new__released h3 {
+    text-align: center;
+  }
+}
+
+.dashboard .introduction {
+  width: 75%;
+  height: 100vh;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard .introduction {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.dashboard .introduction h1 {
+  font-size: 2rem;
+  color: #121212;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 500px) {
+  .dashboard .introduction h1 {
+    font-size: 1.4rem;
+  }
+}
+
+.dashboard .introduction p {
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 1.6;
+  width: 60%;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard .introduction p {
+    width: 80%;
+    margin: auto;
+    font-size: small;
+  }
+}
+
+.dashboard .introduction .hero__img {
+  width: 25%;
+  margin-left: auto;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 500px) {
+  .dashboard .introduction .hero__img {
+    width: 50%;
+  }
+}
+
+.new__released .spiritual__books,
+.new__released .programming__books {
+  margin-left: auto;
+  width: 75%;
+  margin-top: 1.7rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+  .new__released .spiritual__books,
+  .new__released .programming__books {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .new__released .spiritual__books,
+  .new__released .programming__books {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+  }
+  .new__released .spiritual__books .book,
+  .new__released .programming__books .book {
+    margin: 0;
+    padding-left: 0;
+  }
+}
+
+.new__released .spiritual__books .book,
+.new__released .programming__books .book {
+  flex: 0 0.5 1;
+  border-radius: 7px;
+  margin-top: 1rem;
+  margin-left: 50px;
+  max-width: 250px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.096);
+}
+
+.new__released .spiritual__books .book img,
+.new__released .programming__books .book img {
+  width: 100%;
+}
+
+@media screen and (max-width: 980px) {
+  .new__released .spiritual__books .book,
+  .new__released .programming__books .book {
+    margin-left: 0;
+  }
+}
+
+.book__description {
+  padding: 1.81rem;
+}
+
+.book__description h4 {
+  color: #333;
+  font-family: "Raleway", sans-serif;
+  margin: 0 0 1rem 0;
+}
+
+.book__description a {
+  color: #ff74c1;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  transition: all 0.8s;
+}
+
+.glass .content {
+  text-align: center;
+}
+
+.glass .content img {
+  width: 25%;
+}
+
+.glass .content .heading {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  margin-top: 0.8rem;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.glass .content ul {
+  list-style: none;
+}
+
+.glass .content ul a {
+  color: #121221;
+  text-decoration: none;
+}
+
+.glass .content ul li {
+  margin: 1rem 0;
+  font-family: "Raleway", sans-serif;
+  padding: 1rem 0;
+  transition: all 0.4s;
+}
+
+.glass .content ul li:hover {
+  background: linear-gradient(
+    to bottom right,
+    white,
+    rgba(238, 238, 238, 0.248)
+  );
+}
