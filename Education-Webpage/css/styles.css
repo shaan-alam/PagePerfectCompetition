@@ -208,6 +208,7 @@ nav ul li a:hover {
 .info .info__rightContainer.text {
   flex-direction: column;
   align-items: flex-end;
+  text-align: right;
 }
 
 .info .info__leftContainer {
@@ -241,8 +242,8 @@ nav ul li a:hover {
 }
 
 .help__wrapper .help__blockLeftContainer h1, .help__wrapper .help__blockRightContainer h1 {
+  color: rgba(0, 0, 0, 0.8);
   font-family: "Montserrat", sans-serif;
-  font-size: 2rem;
   margin-bottom: 1.5rem;
 }
 
@@ -250,6 +251,7 @@ nav ul li a:hover {
   line-height: 1.6;
   color: rgba(0, 0, 0, 0.8);
   font-family: "Montserrat", sans-serif;
+  display: block;
 }
 
 .help__wrapper .help__blockLeftContainer img, .help__wrapper .help__blockRightContainer img {

@@ -21,8 +21,8 @@
       align-items: center;
 
       h1 {
+        color: darken($gray-color, 10%);
         font-family: $montserrat;
-        font-size: 2rem;
         margin-bottom: 1.5rem;
       }
 
@@ -30,6 +30,7 @@
         line-height: 1.6;
         color: $gray-color;
         font-family: $montserrat;
+        display: block;
       }
 
       img {
@@ -42,7 +43,6 @@
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-start;
-      // text-align: left;
     }
 
     // Right containers should have text right aligned
