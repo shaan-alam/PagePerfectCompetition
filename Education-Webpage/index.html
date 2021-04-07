@@ -7,12 +7,20 @@
     <title>Kids Empowerment Foundation</title>
     <link rel="stylesheet" href="./css/styles.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <!-- navbar -->
     <nav>
       <div class="container">
         <ul>
+          <li>
+            <a href="#!" class="bars"><i class="fa fa-bars"></i></a>
+          </li>
+          <li><a href="#!" class="close">&times;</a></li>
           <li><a href="#!">Home</a></li>
           <li><a href="#!">About</a></li>
           <li><a href="#!">Services</a></li>
@@ -41,7 +49,10 @@
             data-aos-delay="400"
           >
             <a href="#!" class="primary__btn">Get Started</a>
-            <a href="#!" class="secondary__btn">Play Video</a>
+            <a href="#!" class="secondary__btn"
+              ><i class="fa fa-play-circle" aria-hidden="true"></i> Play
+              Video</a
+            >
           </div>
         </div>
         <div class="hero__wrapperRight">
@@ -85,7 +96,7 @@
           data-aos-delay="400"
         >
           <img src="./images/books.svg" alt="School" />
-          <h3>Education for Everyone</h3>
+          <h3>Free Books to learn</h3>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. A dolor
             provident ducimus quos animi error tempora velit, id at! Tempore
@@ -102,7 +113,7 @@
           data-aos-delay="600"
         >
           <img src="./images/flag.svg" alt="School" />
-          <h3>Education for Everyone</h3>
+          <h3>Sense of Equality</h3>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. A dolor
             provident ducimus quos animi error tempora velit, id at! Tempore
@@ -125,10 +136,9 @@
               data-aos-duration="2000"
               data-aos-delay="200"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-              exercitationem inventore tempora quis, iste vero quidem est. Nemo,
-              eos sit expedita cum adipisci, esse et reprehenderit maiores
-              pariatur fugiat nihil?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+              ratione molestias labore saepe ab temporibus veritatis, tempore
+              voluptatum praesentium quos.
             </p>
           </div>
           <div class="info__rightContainer">
@@ -146,7 +156,7 @@
         <div class="info">
           <div class="info__leftContainer">
             <img
-              src="./images/zach.jpg"
+              src="./images/ben.jpg"
               alt="Zach"
               data-aos="fade-left"
               data-aos-duration="2000"
@@ -154,16 +164,15 @@
             />
           </div>
           <div class="info__rightContainer text">
-            <h1 data-aos="fade-down" data-aos-duration="2000">Our History</h1>
+            <h1 data-aos="fade-down" data-aos-duration="2000">Our Present</h1>
             <p
               data-aos="fade-down"
               data-aos-duration="2000"
               data-aos-delay="200"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-              exercitationem inventore tempora quis, iste vero quidem est. Nemo,
-              eos sit expedita cum adipisci, esse et reprehenderit maiores
-              pariatur fugiat nihil?
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Reiciendis placeat laboriosam libero ipsum molestiae magni rerum
+              nihil corporis, harum inventore.
             </p>
           </div>
         </div>
@@ -171,21 +180,20 @@
         <!-- third info -->
         <div class="info">
           <div class="info__leftContainer text">
-            <h1 data-aos="fade-down" data-aos-duration="2000">Our History</h1>
+            <h1 data-aos="fade-down" data-aos-duration="2000">Our Future</h1>
             <p
               data-aos="fade-down"
               data-aos-duration="2000"
               data-aos-delay="200"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-              exercitationem inventore tempora quis, iste vero quidem est. Nemo,
-              eos sit expedita cum adipisci, esse et reprehenderit maiores
-              pariatur fugiat nihil?
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+              ipsam in provident consectetur placeat, molestiae aliquam quas
+              similique iure reiciendis!
             </p>
           </div>
           <div class="info__rightContainer">
             <img
-              src="./images/zach.jpg"
+              src="./images/ben-wicks.jpg"
               alt="Zach"
               data-aos="fade-right"
               data-aos-duration="2000"
@@ -338,9 +346,40 @@
       </div>
     </div>
 
+    <!-- footer -->
+
+    <footer>
+      <div class="container">
+        <h1>Kids Empowerment Foundation</h1>
+
+        <div class="footer__grid">
+          <div class="footer__gridLeftContainer">
+            <h4>EMAIL - test1234@gmail.com</h4>
+            <h4>PHONE - 555 555 5555</h4>
+            <h4>Connect with us on</h4>
+            <a href="#!"
+              ><i class="fa fa-facebook-official" aria-hidden="true"></i>
+            </a>
+            <a href="#!"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="#!"
+              ><i class="fa fa-youtube-play" aria-hidden="true"></i
+            ></a>
+            <a href="#!"
+              ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="footer__gridRightContainer">
+            <h4>Address</h4>
+            <p>ABCD ROAD, PERSHING SQUARE, NEW YORK</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
+    <script src="./js/app.js"></script>
   </body>
 </html>

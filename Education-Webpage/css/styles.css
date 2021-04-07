@@ -27,6 +27,49 @@ nav ul {
   justify-content: space-between;
 }
 
+nav ul .close,
+nav ul .bars {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  nav ul .bars {
+    position: fixed;
+    z-index: 20;
+    color: #333;
+    display: block;
+  }
+  nav ul .bars:hover {
+    color: #333;
+  }
+}
+
+@media screen and (max-width: 500px) and (max-width: 500px) {
+  nav ul.visible {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    background-color: #ffb800;
+    animation: fadeIn 0.5s ease-in;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  nav ul.visible .close {
+    display: block;
+    font-size: 2rem;
+  }
+  nav ul.visible .bars {
+    display: none;
+  }
+}
+
 nav ul li a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.8);
@@ -34,8 +77,22 @@ nav ul li a {
   font-family: "Montserrat", sans-serif;
 }
 
-nav ul li a:hover {
-  color: #000;
+@media screen and (max-width: 500px) {
+  nav ul li a {
+    color: #fff;
+  }
+  nav ul li a:hover {
+    color: #fff;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .hero__wrapper {
@@ -49,7 +106,8 @@ nav ul li a:hover {
   justify-content: space-between;
 }
 
-.hero__wrapperLeft, .hero__wrapperRight {
+.hero__wrapperLeft,
+.hero__wrapperRight {
   flex: 1;
   height: 100%;
   display: flex;
@@ -60,7 +118,15 @@ nav ul li a:hover {
 .hero__wrapperLeft {
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 860px) {
+  .hero__wrapperLeft {
+    flex: 1;
+    text-align: center;
+    align-items: center;
+  }
 }
 
 .hero__wrapperLeft h1 {
@@ -68,11 +134,30 @@ nav ul li a:hover {
   margin-bottom: 1.7rem;
 }
 
+@media screen and (max-width: 500px) {
+  .hero__wrapperLeft h1 {
+    font-size: 1rem;
+  }
+}
+
 .hero__wrapperLeft p {
   font-family: "Montserrat", sans-serif;
   line-height: 1.6;
   color: rgba(0, 0, 0, 0.8);
   margin-bottom: 1.7rem;
+}
+
+@media screen and (max-width: 500px) {
+  .hero__wrapperLeft p {
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .hero__wrapperRight {
+    display: none;
+    flex: 0;
+  }
 }
 
 .hero__wrapperRight img {
@@ -86,6 +171,13 @@ nav ul li a:hover {
 
 .hero__wrapper .hero__cta a {
   margin-right: 25px;
+}
+
+@media screen and (max-width: 500px) {
+  .hero__wrapper .hero__cta a {
+    display: block;
+    margin-top: 1rem;
+  }
 }
 
 .primary__btn {
@@ -146,6 +238,12 @@ nav ul li a:hover {
   margin-right: 50px;
 }
 
+@media screen and (max-width: 860px) {
+  .goals__wrapper .goals__grid .goal {
+    margin: 1.5rem auto;
+  }
+}
+
 .goals__wrapper .goals__grid .goal h3 {
   margin: 1rem 0;
   font-family: "Montserrat", sans-serif;
@@ -159,7 +257,7 @@ nav ul li a:hover {
 }
 
 .info__wrapper {
-  height: 200vh;
+  height: auto;
   width: 100%;
   background: url("../images//yellow-bg.svg") no-repeat;
   background-size: cover;
@@ -174,13 +272,24 @@ nav ul li a:hover {
   display: flex;
 }
 
-.info__wrapper .info__leftContainer, .info__wrapper .info__rightContainer {
-  flex: 1;
+@media screen and (max-width: 860px) {
+  .info__wrapper .info {
+    flex-direction: column;
+  }
+  .info__wrapper .info:nth-child(2n) {
+    flex-direction: column-reverse;
+  }
+}
+
+.info__wrapper .info__leftContainer,
+.info__wrapper .info__rightContainer {
+  flex: 0 1 1;
   display: flex;
   align-items: center;
 }
 
-.info__wrapper .info__leftContainer img, .info__wrapper .info__rightContainer img {
+.info__wrapper .info__leftContainer img,
+.info__wrapper .info__rightContainer img {
   width: 70%;
 }
 
@@ -192,6 +301,13 @@ nav ul li a:hover {
   margin-bottom: 1.5rem;
 }
 
+@media screen and (max-width: 500px) {
+  .info__wrapper .info .info__leftContainer h1,
+  .info__wrapper .info .info__rightContainer h1 {
+    font-size: 1.5rem;
+  }
+}
+
 .info__wrapper .info .info__leftContainer p,
 .info__wrapper .info .info__rightContainer p {
   color: #fff;
@@ -200,23 +316,59 @@ nav ul li a:hover {
   font-weight: 500;
 }
 
+@media screen and (max-width: 500px) {
+  .info__wrapper .info .info__leftContainer p,
+  .info__wrapper .info .info__rightContainer p {
+    font-size: small;
+  }
+}
+
 .info .info__leftContainer.text {
   flex-direction: column;
   align-items: flex-start;
+}
+
+@media screen and (max-width: 860px) {
+  .info .info__leftContainer.text {
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .info .info__rightContainer.text {
   flex-direction: column;
   align-items: flex-end;
   text-align: right;
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 860px) {
+  .info .info__rightContainer.text {
+    text-align: center;
+    align-items: center;
+  }
 }
 
 .info .info__leftContainer {
   justify-content: flex-start;
 }
 
+@media screen and (max-width: 860px) {
+  .info .info__leftContainer {
+    margin-top: 1.7rem;
+    justify-content: center;
+  }
+}
+
 .info .info__rightContainer {
   justify-content: flex-end;
+}
+
+@media screen and (max-width: 860px) {
+  .info .info__rightContainer {
+    margin-top: 1.7rem;
+    justify-content: center;
+  }
 }
 
 .help__wrapper {
@@ -229,32 +381,65 @@ nav ul li a:hover {
   font-family: "Montserrat", sans-serif;
 }
 
+@media screen and (max-width: 500px) {
+  .help__wrapper h1 {
+    font-size: 1.5rem;
+  }
+}
+
 .help__wrapper .help__block {
   margin: 4rem 0;
   display: flex;
   justify-content: space-between;
 }
 
-.help__wrapper .help__blockLeftContainer, .help__wrapper .help__blockRightContainer {
+@media screen and (max-width: 860px) {
+  .help__wrapper .help__block {
+    flex-direction: column;
+  }
+  .help__wrapper .help__block:nth-child(2) {
+    flex-direction: column-reverse;
+  }
+}
+
+.help__wrapper .help__blockLeftContainer,
+.help__wrapper .help__blockRightContainer {
   flex: 1;
   display: flex;
   align-items: center;
 }
 
-.help__wrapper .help__blockLeftContainer h1, .help__wrapper .help__blockRightContainer h1 {
+.help__wrapper .help__blockLeftContainer h1,
+.help__wrapper .help__blockRightContainer h1 {
   color: rgba(0, 0, 0, 0.8);
   font-family: "Montserrat", sans-serif;
   margin-bottom: 1.5rem;
 }
 
-.help__wrapper .help__blockLeftContainer p, .help__wrapper .help__blockRightContainer p {
+@media screen and (max-width: 500px) {
+  .help__wrapper .help__blockLeftContainer h1,
+  .help__wrapper .help__blockRightContainer h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.help__wrapper .help__blockLeftContainer p,
+.help__wrapper .help__blockRightContainer p {
   line-height: 1.6;
   color: rgba(0, 0, 0, 0.8);
   font-family: "Montserrat", sans-serif;
   display: block;
 }
 
-.help__wrapper .help__blockLeftContainer img, .help__wrapper .help__blockRightContainer img {
+@media screen and (max-width: 500px) {
+  .help__wrapper .help__blockLeftContainer p,
+  .help__wrapper .help__blockRightContainer p {
+    font-size: small;
+  }
+}
+
+.help__wrapper .help__blockLeftContainer img,
+.help__wrapper .help__blockRightContainer img {
   width: 70%;
 }
 
@@ -264,6 +449,13 @@ nav ul li a:hover {
   justify-content: flex-start;
 }
 
+@media screen and (max-width: 860px) {
+  .help__wrapper .help__blockLeftContainer.text {
+    align-items: center;
+    text-align: center;
+  }
+}
+
 .help__wrapper .help__blockRightContainer.text {
   flex-direction: column;
   align-items: flex-end;
@@ -271,12 +463,33 @@ nav ul li a:hover {
   text-align: right;
 }
 
+@media screen and (max-width: 860px) {
+  .help__wrapper .help__blockRightContainer.text {
+    align-items: center;
+    text-align: center;
+  }
+}
+
 .help__wrapper .help__blockLeftContainer {
   justify-content: flex-start;
 }
 
+@media screen and (max-width: 860px) {
+  .help__wrapper .help__blockLeftContainer {
+    margin-top: 1.7rem;
+    justify-content: center;
+  }
+}
+
 .help__wrapper .help__blockRightContainer {
   justify-content: flex-end;
+}
+
+@media screen and (max-width: 860px) {
+  .help__wrapper .help__blockRightContainer {
+    margin-top: 1.7rem;
+    justify-content: center;
+  }
 }
 
 .contact__wrapper {
@@ -319,6 +532,13 @@ nav ul li a:hover {
 
 .contact__wrapper .container form {
   height: 100%;
+  width: 50%;
+}
+
+@media screen and (max-width: 860px) {
+  .contact__wrapper .container form {
+    width: 100%;
+  }
 }
 
 .contact__wrapper .container form .form__field {
@@ -340,4 +560,82 @@ nav ul li a:hover {
 .contact__wrapper .container form button {
   width: 100%;
 }
-/*# sourceMappingURL=styles.css.map */
+
+footer {
+  background: #ffb800;
+}
+
+footer .container {
+  padding: 2rem 0;
+}
+
+footer .container h1 {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (max-width: 500px) {
+  footer .container h1 {
+    font-size: 1.5rem;
+  }
+}
+
+footer .footer__grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 860px) {
+  footer .footer__grid {
+    flex-direction: column;
+  }
+}
+
+footer .footer__gridLeftContainer h4 {
+  margin: 1.5rem 0;
+  font-weight: normal;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (max-width: 500px) {
+  footer .footer__gridLeftContainer h4 {
+    font-size: small;
+  }
+}
+
+footer .footer__gridLeftContainer a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 860px) {
+  footer .footer__gridRightContainer {
+    margin-top: 1.7rem;
+  }
+}
+
+footer .footer__gridRightContainer h4 {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 500px) {
+  footer .footer__gridRightContainer h4 {
+    font-size: small;
+  }
+}
+
+footer .footer__gridRightContainer p {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (max-width: 500px) {
+  footer .footer__gridRightContainer p {
+    font-size: small;
+  }
+}
