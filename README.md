@@ -1,3 +1,4 @@
-# Page Perfect Competition
+# Page Perfect Web Design Competition
 
-E-Library System web design - <a href="https://librarye.netlify.app/">Click here</a>
+Education web design - <a href="https://education-slums.netlify.app/" targe="_blank" rel="noreferrer">Click here</a>
+E-Library System web design - <a href="https://librarye.netlify.app/" targe="_blank" rel="noreferrer">Click here</a>
